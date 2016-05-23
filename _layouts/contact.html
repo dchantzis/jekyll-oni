@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<section class="{{page.sectionClass}}">
+
+  <div class="grid">
+    <div class="unit [ xs-1 s-1 m-2-3 ]">
+      <h1 class="brand-highlight push-1-4 kilo">{{ page.title | strip | upcase }}</h1>
+      <div class="push-0 micro p-container">
+        {{ content | newline_to_br | markdownify }}
+      </div>
+      <div class="push">
+      {% include forms/contact-form.html %}
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="unit [ xs-1 s-1 m-2-3 ]">
+      <div class="push-0 micro p-container">
+        {% include contact-info.html %}
+      </div>
+      <div class="embed embed--16by9" id="map"></div>
+    </div>
+  </div>
+
+</section>
+

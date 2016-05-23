@@ -1,0 +1,71 @@
+---
+layout: default
+title: News
+titleBefore:
+titleAfter:
+meta:
+author:
+image:
+keywords:
+sectionClass:
+priority: 1.0
+includeInNavigation: true
+weight: 2
+sitemap:
+  lastMod: 2016-05-02
+  priority: 0.7
+  changeFreq: monthly
+  include: true
+---
+
+<section class="post">
+  <div class="grid">
+
+    <div class="unit [ xs-1 s-1 m-2-3 ] ">
+
+      {% for post in paginator.posts %}
+        <article itemscope itemtype="http://schema.org/Article">
+          <h2 class="brand-highlight push-1-4 kilo">
+            <a href="{{site.baseurl}}{{post.url}}">{{post.title | strip | upcase}}</a>
+          </h2>
+          <p class="milli push-1-2">
+            <time itemprop="datePublished" datetime="{{post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%B %d, %Y" }}</time>
+          </p>
+          <div class="push-0 micro p-container">{{ post.content | markdownify }}</div>
+
+          <div class="push-0 pad-t-1-4">
+            {% assign images = post.images%}
+            {% for image in images %}
+              <figure class="graphic album-image pad-t-1-4">
+                <div class="embed embed-iso216">
+                  <img class="embed-item flex-img " src="{{ image.src.fullsize | strip }}" alt="{{ album.title | strip | }}">
+                </div>
+                <div class="grahic-info text-center micro island-1-2">
+                <figcaption>
+                  <h3 class="media-title push-0 micro brand-highlight">{{ image.title | strip | upcase }}</h3>
+                  <p class="push-0">({{ image.date }})</p>
+                  <p class="push-0">{{ image.materials }}</p>
+                  <p class="push-0">{{ image.dimensions }}</p>
+                  <div class="push-0 p-container">{{ image.description | markdownify}}</div>
+                </figcaption>
+                </div>
+              </figure>
+            {% endfor %}
+          </div>
+        </article>
+      {% endfor %}
+
+      {% include pagination/default-post-pagination.html %}
+
+    </div>
+
+    <div class="unit [ xs-1 s-1 m-1-3 ] ">
+      <aside class="aside-container">
+        {% include instagram-feed.html %}
+      </aside>
+    </div>
+
+  </div>
+
+</section>
+

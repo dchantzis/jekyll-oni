@@ -1,0 +1,40 @@
+
+.mobile-nav-toggle-box {
+  position: absolute;
+  top: -10em;
+}
+
+.mobile-nav-toggle-label {
+  color: rgba(181, 181, 181, 1);
+  text-transform: uppercase;
+  cursor: pointer;
+  display: block;
+}
+
+.mobile-nav-toggle-box:checked ~ .nav-container {
+  max-height: 17rem;
+}
+
+.nav-container {
+  max-height: 0;
+  overflow: hidden;
+
+  -webkit-transition:
+    opacity 200s ease-in-out,
+    max-height 350ms ease-in-out;
+  transition:
+    opacity 200s ease-in-out,
+    max-height 350ms ease-in-out;
+}
+
+  .nav-xs-s-m-wrapper {
+    display: block;
+  }
+
+@media only screen and (min-width: 38em) {
+
+  .nav-xs-s-m-wrapper {
+    display: none;
+  }
+
+}

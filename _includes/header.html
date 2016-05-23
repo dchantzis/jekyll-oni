@@ -1,0 +1,60 @@
+<header class="masthead push gutter-2 pad-t">
+
+  <div class="nav-xs-s-m-wrapper">
+    <input type="checkbox" class="mobile-nav-toggle-box" name="mobile-nav-toggle" id="mobileNavToggle">
+    <div class="nav-container" data-state="hidden">
+      <nav class="nav-xs-s-main pad-t pad-b-1-2">
+        {% include navigation.html navType="xs-s" %}
+      </nav>
+    </div>
+    <label for="mobileNavToggle" class="mobile-nav-toggle-label show-on-scroll-mobile brand-highlight mega pad-t">
+      menu
+    </label>
+  </div>
+
+  <div class="pad-t-2 pad-b-1-4">
+    <div class="grid grid-middle">
+      <div class="unit [ xs-1 s-1 m-1 l-1-5 ] logo-wrapper push-1-4">
+        {% if '/' == page.url %}
+          <h1 class="logo push-0 kilo"><a href="{{site.baseurl}}/">{{ site.website-title | strip }}</a></h1>
+        {% else %}
+          <h2 class="logo push-0 kilo"><a href="{{site.baseurl}}/">{{ site.website-title | strip }}</a></h2>
+        {% endif %}
+      </div>
+
+      <div class="unit [ m-1-2 l-2-5 ] unit-xs-hidden unit-s-hidden">
+        <nav class="nav nav-m-l-xl-main">
+          {% include navigation.html navType="m-l-xl" %}
+        </nav>
+      </div>
+
+      <div class="unit [ xs-1 s-1 m-1-2 l-2-5 ]">
+        <ul class="list-group--inline push-0 social-links">
+          <li class="email micro"><a href="mailto:{{site.email}}" itemprop="email">{{site.contact-info.e-mail}}</a></li>
+        {% for social in site.social %}
+          {% assign social.provider == social.provider | downcase %}
+            <li class="list-group__item mega">
+            {% case social.provider %}
+              {% when 'facebook' %}
+                 <a class="icon-link" href="https://www.facebook.com/{{social.account-id}}" target="_blank" rel="external">
+                  <i class="icon i-18 i-facebook"></i>
+                  <span class="icon-label hidden">facebook</span>
+                 </a>
+              {% when 'instagram' %}
+                 <a class="icon-link" href="https://www.instagram.com/{{social.account-id}}" target="_blank" rel="external">
+                  <i class="icon i-18 i-instagram"></i>
+                  <span class="icon-label hidden">instagram</span>
+                </a>
+              {% when 'twitter' %}
+                 <a class="icon-link" href="https://twitter.com/{{social.account-id}}" target="_blank" rel="external">
+                  <i class="icon i-18 i-twitter"></i>
+                  <span class="icon-label hidden">twitter</span>
+                </a>
+            {% endcase %}
+            </li>
+        {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>

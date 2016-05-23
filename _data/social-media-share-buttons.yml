@@ -1,0 +1,31 @@
+- provider: facebook
+  display: true
+  sharer-prefix: https://www.facebook.com/sharer/sharer.php?u=
+
+- provider: twitter
+  display: true
+  sharer-prefix: https://twitter.com/home?status=
+
+- provider: reddit
+  display: false
+  sharer-prefix: //www.reddit.com/submit?url=
+
+- provider: linkedin
+  display: true
+  sharer-prefix: https://www.linkedin.com/shareArticle?mini=true&url=
+
+- provider: pinterest
+  display: true
+  sharer-prefix: https://pinterest.com/pin/create/button/?url=
+
+- provider: googleplus
+  display: false
+  sharer-prefix: https://plus.google.com/share?url=
+
+- provider: tumblr
+  display: true
+  sharer-prefix: http://tumblr.com/widgets/share/tool?canonicalUrl=
+
+- provider: instagram
+  display: false
+  sharer-prefix:

@@ -1,0 +1,318 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lekton', sans-serif;
+}
+
+body {
+  color: #000000;
+}
+
+.brand {
+  color: rgba(68, 68, 68, 1);
+}
+
+.brand-highlight {
+  font-family: 'Abel', sans-serif;
+  letter-spacing: 1px;
+}
+
+a,
+a:link,
+a:visited {
+  color: rgba(68, 68, 68, 1);
+  border-bottom: 1px solid transparent;
+  text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+  border-bottom: 0;
+}
+
+.nav-xs-s-main a.current,
+a.current {
+  color: rgba(139, 139, 139, 1);;
+}
+
+li.email {
+  letter-spacing: 1px;
+}
+
+.social-links a,
+.social-links a:link,
+.social-links a:visited {
+  color: #000;
+  border-bottom: 0;
+}
+
+p a,
+p a:link,
+p a:visited {
+  border-bottom: 1px solid rgba(68, 68, 68, 1);
+}
+
+.nav a:hover,
+.nav a:active,
+.nav a:focus,
+.pagination a:hover,
+.pagination a:active,
+.pagination a:focus,
+.related-posts a:hover,
+.related-posts a:active,
+.related-posts a:focus {
+  border-bottom: 1px solid rgba(68, 68, 68, 1);
+}
+
+.nav-xs-s-main {
+  border-bottom: 1px solid rgba(199, 199, 199, 1);
+}
+.nav-xs-s-main a {
+  color: rgba(181, 181, 181, 1);
+}
+
+.nav-m-l-xl-main .list-group__item {
+  padding-right: 1rem;
+}
+
+
+.graphic-info h5 {
+  text-transform: capitalize;
+  font-weight: normal;
+  font-family: 'Abel', sans-serif;
+}
+.graphic-info span {
+  display: none;
+}
+
+.unit.album-cover {
+  transition: width 250ms linear;
+}
+
+.p-container p {
+  margin-bottom: 0.3500rem;
+}
+
+.masthead {
+  text-align: center;
+}
+.masthead,
+.main-content {
+}
+
+.album-image .graphic-info {
+  padding-top: 0.750rem;
+}
+
+.pagination-slim li:first-child::after {
+  content: "/";
+}
+
+.pagination {
+  text-align: center;
+}
+
+.related-posts .related-post-date,
+.related-posts .related-post-title {
+  display: inline-block;
+}
+
+.related-posts .related-post-date::after {
+  content: " /";
+}
+
+
+.form-submitting {
+  opacity: 0.7;
+}
+
+fieldset {
+  padding: 0;
+  border: 0;
+}
+
+fieldset input,
+fieldset textarea {
+  display: block;
+  width: 100%;
+}
+
+fieldset .form-first-name-container {
+  padding-right: 0.1700rem;
+}
+
+fieldset .form-last-name-container {
+  padding-left: 0.1700rem;
+}
+
+fieldset .field-error::first-letter {
+  text-transform: capitalize;
+}
+
+fieldset.form-error {
+  color: rgba(204, 59, 59, 1);
+}
+
+fieldset.form-error input,
+fieldset.form-error textarea {
+  border: 1px solid rgba(204, 59, 59, 1);
+}
+
+.form-contact-notification {
+  background-color: #D1D1D1;
+}
+
+fieldset .field-error,
+.form-contact-notification.form-error {
+  background-color: rgba(204, 59, 59, 1);
+  color: #fff;
+  width: auto;
+  min-width: 0;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.contact-info dt {
+  clear: left;
+  float: left;
+  margin-right: 0.5rem;
+}
+
+.contact-info dd {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+  background-color: #f9f9f9;
+}
+
+@media only screen and (min-width: 25em) {
+
+}
+
+@media only screen and (min-width: 38em) {
+
+  .logo-wrapper {
+    margin-bottom: 0;
+  }
+
+  .masthead {
+    text-align: left;
+  }
+
+  .masthead,
+  .main-content {
+    margin: 0 auto;
+  }
+
+  .email {
+    letter-spacing: 1px;
+  }
+
+  .social-links {
+    text-align: right;
+    float:right;
+  }
+
+
+  .album-cover .graphic {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .album-cover .graphic-info {
+
+    position: absolute;
+    top: -2.3rem;
+    bottom: -2.3rem;
+    left: -2.3rem;
+    right: -2.3rem;
+
+    text-align: center;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    transform-origin: center center;
+    opacity: 0;
+
+    transition: all 200ms ease-out;
+  }
+
+  .album-cover .graphic-info figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    transform: translate(-50%, -50%);
+  }
+
+  .album-cover .graphic-info .media-title {
+    display: block;
+    color: #fff;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+
+  .album-cover .graphic-info h5 {
+    text-transform:capitalize;
+  }
+  .album-cover .graphic-info span {
+    display: block;
+    font-style: italic;
+    font-weight: bold;
+    color: rgba(140, 136, 136, 1);
+  }
+
+  .album-cover .graphic-info a {
+    margin-top: 0.1rem;
+    text-decoration: none;
+  }
+
+  .album-cover .graphic:hover .graphic-info {
+    opacity: 1;
+  }
+
+  .album .graphic-info {
+    padding-top: 0;
+    padding-left: 2.6000rem;
+    text-align: right;
+  }
+
+  .aside-container {
+    padding-top: 0;
+    padding-left: 2.6000rem;
+  }
+
+  .pagination {
+    text-align: left;
+  }
+
+  .related-posts {
+    text-align: right;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  .masthead,
+  .main-content {
+    width: 50rem;
+  }
+
+  .album .graphic-info {
+    text-align: right;
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+}

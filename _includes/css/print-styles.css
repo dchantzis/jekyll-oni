@@ -1,0 +1,79 @@
+/*
+ * Modulifier || Code released under the UNLICENSE
+ * Code under other copyrights & licenses listed below.
+ * http://modulifier.web-dev.tools/#print
+ */
+
+.print-only {
+  display: none;
+  visibility: hidden;
+}
+
+@media print {
+
+  .no-print {
+    display: none;
+    visibility: hidden;
+  }
+
+  .print-only {
+    display: block;
+    visibility: visible;
+  }
+
+  /*
+   * (c) HTML5 Boilerplate || MIT License
+   *     https://html5boilerplate.com/
+   */
+
+  /* stylelint-disable declaration-no-important */
+
+  *, *::before, *::after, *::first-letter, *::first-line {
+    background: none transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* stylelint-enable */
+
+  a, a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre, blockquote {
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  p, h1, h2, h3, h4, h5, h6 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+
+  /* End HTML5 Boilerplate code */
+}

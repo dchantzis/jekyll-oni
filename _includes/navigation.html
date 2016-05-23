@@ -1,0 +1,13 @@
+{% assign site-pages = site.pages | sort:"weight"  %}
+<ul class="{% if 'm-l-xl' == include.navType %}list-group--inline{% else %}list-group brand-highlight{% endif %} push-0 ">
+  {% for item in site-pages %}
+    {% if item.url contains "page2" %}{% continue %}{% endif %}
+    {% if true == item.includeInNavigation %}
+      <li class="list-group__item {% if 'xs-s' == include.navType %}pad-t-1-4 pad-b-1-2{% endif %}">
+        <a class="{% if 'm-l-xl' == include.navType %}milli{% else %}mega{% endif %} {% if page.url contains item.url %}current{% endif %}" href="{{site.baseurl}}{{item.url}}">
+        {% if 'm-l-xl' == include.navType %}/{% endif %}{{ item.title | upcase }}
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+{% assign album = page %}
+
+<section class="{{page.sectionClass}}">
+
+{% if false == album.hide-page-title %}
+  <div class="grid album-info">
+    <div class="unit [ xs-1 s-1 m-2-3 ]">
+      <h1 class="brand-highlight push-1-4 kilo">{{ album.title | strip | upcase }}</h1>
+      <div class="push-0 micro p-container">{{ content | markdownify }}</div>
+    </div>
+  </div>
+{% endif %}
+  <div class="push-0">
+    {% assign images = album.images | sort:"image-order" %}
+    {% for image in images %}
+      <figure class="graphic album-image pad-t-1-4">
+        <div class="grid">
+          <div class="unit [ xs-1 s-1 m-2-3 ] ">
+            <div class="embed embed-iso216">
+              <img class="embed-item flex-img " src="{{ image.src.fullsize | strip }}" alt="{{ album.title | strip | }}">
+            </div>
+          </div>
+          <div class="unit [ xs-1 s-1 m-1-3 ] graphic-info text-center micro">
+            <figcaption>
+              <h3 class="media-title push-0 micro brand-highlight">{{ image.title | strip | upcase }} ({{ image.date }})</h3>
+              <p class="push-0">{{ image.materials }}</p>
+              <p class="push-0">{{ image.dimensions }}</p>
+              <div class="push-0 p-container">{{ image.description | markdownify }}</div>
+            </figcaption>
+          </div>
+        </div>
+      </figure>
+    {% endfor %}
+  </div>
+  {% include social-share-buttons-fontawesome.html %}
+  {% include pagination/album-pagination.html %}
+
+</section>
+
