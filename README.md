@@ -1,5 +1,7 @@
 # README
 
+## **"Oni"** | Responsive Multi-Purpose Jekyll Creative Theme
+
 ### Jekyll theme specifically created for portfolio websites, utilizing Jekyll collections for image albums.
 **Built: Early 2016**
 
