@@ -3,7 +3,7 @@
 ### Jekyll theme specifically created for portfolio websites, utilizing Jekyll collections for image albums.
 **Built: Early 2016**
 
-**Demo Website URL: [dchantzis.github.io/jekyll-oni/](http://dchantzis.github.io/jekyll-oni/)**
+**Demo Website URL:** [dchantzis.github.io/jekyll-oni/](http://dchantzis.github.io/jekyll-oni/)
 **Git Repo:** [github.com/dchantzis/jekyll-oni](https://github.com/dchantzis/jekyll-oni)
 
 This theme includes the following:
@@ -15,14 +15,15 @@ This theme includes the following:
 - Easily scalable text and component sizing with rem units in the CSS
 - Paginations
 - Related posts
-- Integrating Google analytics and Google maps
+- Contact form using [formspree.io/](https://formspree.io/)
+- Integrating Google analytics and themed Google maps
 - Google fonts (Lekton)
 - Syntax highlighting
 - Pure CSS toggleable navigation
-- Lightbox presentation for image albums
 - Social media share buttons for posts
 - Disqus comments
 - Separate sitemap page
+- Word counter and "reading time" functionality for posts
 
 ### Technologies and tools used:
 
