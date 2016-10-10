@@ -14,7 +14,7 @@ social:
   - provider: twitter
     account-id: '#'
 include-analytics-tracking: true
-google-api-key:
+google-api-key: AIzaSyDRzuGOC7F2MLIzQaJAeYWjKoZq3g3Boo4
 analytics:
   provider: google
   google:
